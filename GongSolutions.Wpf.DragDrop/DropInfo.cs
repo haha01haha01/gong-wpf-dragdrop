@@ -258,8 +258,8 @@ namespace GongSolutions.Wpf.DragDrop
   [Flags]
   public enum RelativeInsertPosition
   {
-    BeforeTargetItem = 0,
-    AfterTargetItem = 1,
-    TargetItemCenter = 2
+    BeforeTargetItem = 1,
+    AfterTargetItem = 2,
+    TargetItemCenter = 4
   }
 }
