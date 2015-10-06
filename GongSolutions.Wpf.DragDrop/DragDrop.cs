@@ -662,7 +662,7 @@ namespace GongSolutions.Wpf.DragDrop
       // is made impossible.
       var itemsControl = sender as ItemsControl;
 
-      if (m_DragInfo.VisualSourceItem != null && itemsControl != null && itemsControl.CanSelectMultipleItems()) {
+      if ((Keyboard.Modifiers & ModifierKeys.Shift) == 0 && (Keyboard.Modifiers & ModifierKeys.Control) == 0 && m_DragInfo.VisualSourceItem != null && itemsControl != null && itemsControl.CanSelectMultipleItems()) {
         var selectedItems = itemsControl.GetSelectedItems().Cast<object>();
 
         if (selectedItems.Count() > 1 && selectedItems.Contains(m_DragInfo.SourceItem)) {
